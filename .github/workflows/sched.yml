@@ -1,7 +1,7 @@
 name: Test sched
 
 on: 
-  scedule:
+  schedule:
     -cron: "55-59 * * * *"
     
 jobs:
