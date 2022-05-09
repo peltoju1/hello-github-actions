@@ -2,7 +2,7 @@ name: Test sched
 
 on: 
   schedule:
-    -cron: "55-59 * * * *"
+    - cron: "0-5 * * * *"
     
 jobs:
   run-github-actions:
