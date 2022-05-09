@@ -1,0 +1,15 @@
+name: Test sched
+
+on: 
+  scedule:
+    -cron: "55-59 * * * *"
+    
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List
+        run: |
+          pwd
+          ls -a
+          
