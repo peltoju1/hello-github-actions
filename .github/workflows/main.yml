@@ -14,7 +14,9 @@ jobs:
   test:
     name: job2
     runs-on: ubuntu-latest
+    if: $NORUN == 'true'
     steps:
-       - run: echo "norun $NORUN"
+       - run: echo "norun $NORUN §{{secrets.TEST}}"
+       
 #      - run: echo "Norun: $NORUN"
       
