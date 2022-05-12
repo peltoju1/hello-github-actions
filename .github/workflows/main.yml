@@ -1,5 +1,7 @@
 name: A workflow for my Hello World file
 on: push
+env:
+ NORUN: true
 jobs:
   build:
     name: Hello world action
@@ -9,3 +11,10 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "JP"
+  test:
+    name: job2
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo "norun $NORUN"
+#      - run: echo "Norun: $NORUN"
+      
