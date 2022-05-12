@@ -14,9 +14,10 @@ jobs:
   test:
     name: job2
     runs-on: ubuntu-latest
-    if: ${{env.NORUN == 'true'}}
     steps:
-       - run: echo "norun $NORUN §{{secrets.TEST}}"
+       - name: printtaa
+         if: ${{ env.NORUN == 'true'}}
+         run: echo "norun $NORUN §{{secrets.TEST}}"
        
 #      - run: echo "Norun: $NORUN"
       
